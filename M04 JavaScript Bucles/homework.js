@@ -211,14 +211,18 @@ function esPrimo(num) {
    if (num < 0 || num == 0 || num == 1){
       return "No son primos";
    }
-   else if (num%num == 0 && num%1 == num){
-      return "true";
+   else if (num >= 1){
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+         if (num % i === 0){
+         return "true";  
+         }
+      }
    }
-   else{
+   else {
       return "false"
    }
 }
-console.log(esPrimo(0))
+console.log(esPrimo(9))
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
@@ -251,7 +255,15 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   let cont = 0;
+   do {
+      num = num + 5;
+      cont ++;
+   }
+   while (cont<8)
+   return num;
 }
+console.log(doWhile(0))
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
